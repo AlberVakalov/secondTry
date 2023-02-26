@@ -1,6 +1,6 @@
 package day6;
 
-class Motorbike {
+public class Motorbike {
     private String model;
     private String color;
     private int ageBike;
@@ -28,11 +28,11 @@ class Motorbike {
         System.out.println(getModel() + " " + getColor() + " " + getAgeBike());
     }
 
-    int yearDifference(int inputYear) {
-        inputYear = ageBike - inputYear;
-        return inputYear;
+    public int yearDifference(int inputYear) {
+        return inputYear = ageBike - inputYear;
     }
-    void info() {
+
+    public void info() {
         System.out.println("Это Мотоцикл" + yearDifference(2000));
     }
 }

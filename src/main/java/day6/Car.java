@@ -1,9 +1,9 @@
 package day6;
 
 public class Car {
-    private String model;
-    private String color;
-    private int ageCar;
+    public String model;
+    public String color;
+    public int ageCar;
 
     public void setColor(String color1) {
         color = color1;

@@ -2,13 +2,13 @@ package day6;
 
 public class Airplane {
 
-     String manufacture;
-     int year;
-     int length;
-     int weight;
-    int fuel;
+    private String manufacture;
+    private int year;
+    private int length;
+    private int weight;
+    private int fuel;
 
-    public Airplane(String manufacture, int year, int weight, int length){
+    public Airplane(String manufacture, int year, int weight, int length) {
         this.manufacture = manufacture;
         this.year = year;
         this.weight = weight;
@@ -19,14 +19,13 @@ public class Airplane {
     }
 
 
-
-    public void fillUp(int fuel){
-        this.fuel = fuel;
+    public void fillUp(int inFuel) {
+        fuel += inFuel;
     }
 
 
     public void setFuel(int inFuel) {
-        fuel += inFuel;
+        this.fuel = inFuel;
     }
 
     public void setManufacture(String manufacture) {
@@ -49,7 +48,8 @@ public class Airplane {
     public int getFuel() {
         return fuel;
     }
-    public void info(){
+
+    public void info() {
         System.out.println("Изготовитель: " + manufacture + ", год выпуска: " + year + ", длина: " + length +
                 " " + ", вес: " + weight + ", кол-во топлива: " + fuel);
     }
