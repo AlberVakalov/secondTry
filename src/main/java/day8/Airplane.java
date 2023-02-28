@@ -2,24 +2,29 @@ package day8;
 
 public class Airplane {
 
-    String manufacture;
-    int year;
-    int length;
-    int weight;
-    int fuel;
+    private String manufacture;
+    private int year;
+    private int length;
+    private int weight;
+    private int fuel;
 
     public Airplane(String manufacture, int year, int weight, int length) {
+        this.manufacture = manufacture;
+        this.year = year;
+        this.weight = weight;
+        this.length = length;
+        this.fuel = 0;
 
     }
 
 
     public void fillUp(int fuel) {
-        this.fuel = fuel;
+        this.fuel += fuel;
     }
 
 
     public void setFuel(int inFuel) {
-        fuel += inFuel;
+        this.fuel = inFuel;
     }
 
     public void setManufacture(String manufacture) {
@@ -55,10 +60,13 @@ public class Airplane {
     public static void compareAirplanes(Airplane air1, Airplane air2) {
         if (air1.getLength() > air2.getLength())
             System.out.println("Длинее первый самолет");
-        else
+        else if (air1.getLength() < air2.getLength())
             System.out.println("Длинее второй самолет");
+        else
+            System.out.println("Самолеты равны");
     }
-    public String toString(){
+
+    public String toString() {
         return manufacture + " " + year + " " + weight + " " + length;
     }
 

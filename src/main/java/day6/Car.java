@@ -29,4 +29,7 @@ public class Car {
         return ageCar;
     }
 
+    public int yearDifference(int i) {
+        return i;
+    }
 }

@@ -29,7 +29,7 @@ public class Motorbike {
     }
 
     public int yearDifference(int inputYear) {
-        return inputYear = ageBike - inputYear;
+        return inputYear - ageBike;
     }
 
     public void info() {

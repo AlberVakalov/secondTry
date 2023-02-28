@@ -20,12 +20,12 @@ public class Airplane {
 
 
     public void fillUp(int fuel) {
-        this.fuel = fuel;
+        this.fuel += fuel;
     }
 
 
     public void setFuel(int inFuel) {
-        fuel += inFuel;
+        this.fuel = inFuel;
     }
 
     public void setManufacture(String manufacture) {
