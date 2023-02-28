@@ -33,7 +33,7 @@ public class Motorbike {
     }
 
     public void info() {
-        System.out.println("Это Мотоцикл" + yearDifference(2000));
+        System.out.println("Этот Мотоцикл " + Math.abs(yearDifference(1000)) + " года");
     }
 }
 
