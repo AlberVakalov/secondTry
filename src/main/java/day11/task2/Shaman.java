@@ -39,7 +39,7 @@ public class Shaman extends Hero implements Healer, MagicAttack {
 
     @Override
     public void magicalAttack(Hero hero) {
-        double attackScore = magAtt * (1 - magDef);
+        double attackScore = magAtt - (magAtt * magDef);
         if (hero.health + attackScore < 0) {
             hero.health = 0;
         }

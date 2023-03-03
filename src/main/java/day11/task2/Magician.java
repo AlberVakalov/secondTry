@@ -9,15 +9,8 @@ public class Magician extends Hero implements MagicAttack{
     }
 
     @Override
-    public String toString() {
-        return "Magician{" +
-                "health=" + health +
-                '}';
-    }
-
-    @Override
     public void magicalAttack(Hero hero) {
-        double attackScore = magAtt * (1 - magDef);
+        double attackScore = magAtt - (magAtt * magDef);
         if (hero.health + attackScore < 0) {
             hero.health = 0;
         }

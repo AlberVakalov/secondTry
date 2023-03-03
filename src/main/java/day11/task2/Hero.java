@@ -13,7 +13,7 @@ public abstract class Hero implements PhysAttack {
 
 
     public void physicalAttack(Hero hero) {
-        double attackScore = physAtt * (1 - physDef);
+        double attackScore = physAtt - (physAtt * physDef);
         if (hero.health + attackScore < 0) {
             hero.health = 0;
         }
