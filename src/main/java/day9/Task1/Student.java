@@ -13,6 +13,7 @@ public class Student extends Person{
     }
 
     public void printInfo(){
+        System.out.println("Это человек с именем " + getName());
         System.out.println("Это студент с именем " + getName());
     }
 }

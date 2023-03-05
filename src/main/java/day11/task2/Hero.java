@@ -1,11 +1,11 @@
 package day11.task2;
 
 public abstract class Hero implements PhysAttack {
-    public double health;
-    public double physDef;
-    public double magDef;
-    public int physAtt;
-    public int magAtt;
+    protected double health;
+    protected double physDef;
+    protected double magDef;
+    protected int physAtt;
+    protected int magAtt;
 
     public Hero() {
         health = 100;
