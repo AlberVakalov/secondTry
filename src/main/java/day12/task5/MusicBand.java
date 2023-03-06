@@ -4,7 +4,7 @@ import java.util.List;
 
 public class MusicBand {
     private final String name;
-    int year;
+    private final int year;
     private List<MusicArtist> members;
 
     public String toString() {

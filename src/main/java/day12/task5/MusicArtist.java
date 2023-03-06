@@ -3,8 +3,8 @@ package day12.task5;
 import java.util.List;
 
 public class MusicArtist {
-    int age;
-    String name;
+    private int age;
+    private String name;
 
     @Override
     public String toString() {
