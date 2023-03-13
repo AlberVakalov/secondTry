@@ -12,25 +12,26 @@ public class Task3 {
         MusicBand musicBand2 = new MusicBand("Звуки му", 1983);
         MusicBand musicBand3 = new MusicBand("Beatles", 1963);
         MusicBand musicBand4 = new MusicBand("Skrillex", 2001);
-
         List<MusicBand> musicList = new ArrayList<>();
+
         musicList.add(musicBand);
         musicList.add(musicBand1);
         musicList.add(musicBand2);
         musicList.add(musicBand3);
         musicList.add(musicBand4);
 
+
         System.out.println(musicList);
 
-        Collections.shuffle(musicList);
 
-        List<MusicBand> filteredList = new ArrayList<>();
-
-        for (MusicBand band : musicList) {
+        System.out.println(groupsAfter2000(musicList));
+    }
+    public static List<MusicBand> groupsAfter2000(List<MusicBand> bands) {
+        List<MusicBand> musicList1 = new ArrayList<>();
+        for (MusicBand band :bands)
             if (band.getYear() > 2000) {
-                filteredList.add(band);
+                musicList1.add(band);
             }
-        }
-        System.out.println(filteredList);
+        return musicList1;
     }
 }

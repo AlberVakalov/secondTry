@@ -1,7 +1,11 @@
 package day12.task3;
 
+import java.util.List;
+
 public class MusicBand {
-    protected String name;
+    private final String name;
+    int year;
+
 
     @Override
     public String toString() {
@@ -15,7 +19,6 @@ public class MusicBand {
         return year;
     }
 
-    int year;
 
     public MusicBand(String name, int year) {
         this.name = name;
