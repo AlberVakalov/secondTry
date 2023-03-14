@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class User {
-    String username;
-    List<User> subscription = new ArrayList<>();
+    private final String username;
+    private final List<User> subscription;
 
     public User(String username) {
         this.username = username;
@@ -26,8 +26,9 @@ public class User {
 
     public boolean isSubscribed(User user) {
         for (User ourUser : subscription)
-            if (ourUser.getUsername().equals(user.getUsername()))
+            if (ourUser.getUsername().equals(user.getUsername())) {
                 return true;
+            }
         return false;
     }
 
@@ -36,7 +37,7 @@ public class User {
     }
 
     public void sendMessage(User user, String string) {
-
+    MessageDatabase.addNewMessage(this, user, string);
     }
 
     @Override
