@@ -4,13 +4,13 @@ import java.util.Date;
 
 public class Message {
    private final User sender;
-    private final User reciver;
+    private final User receiver;
     private final String text;
     private final Date date;
 
     public Message(User sender, User reciver, String text) {
         this.sender = sender;
-        this.reciver = reciver;
+        this.receiver = reciver;
         this.text = text;
         this.date = new Date();
     }
@@ -19,8 +19,8 @@ public class Message {
         return sender;
     }
 
-    public User getReciver() {
-        return reciver;
+    public User getReceiver() {
+        return receiver;
     }
 
     public String getText() {
@@ -31,7 +31,7 @@ public class Message {
     public String toString() {
         return "Message{" +
                 "FROM: " + sender +
-                "TO: " + reciver +
+                "TO: " + receiver +
                 "ON " + date +
                 "MESSAGE: " + text;
     }
