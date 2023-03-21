@@ -1,7 +1,7 @@
 package day9.Task1;
 
 public class Student extends Person{
-    private String groupName;
+    private final String groupName;
 
     public String getGroupName() {
         return groupName;

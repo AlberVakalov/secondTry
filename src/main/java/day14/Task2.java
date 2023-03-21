@@ -25,15 +25,13 @@ public class Task2 {
                 int age = Integer.parseInt(line[1]);
 
                 if (age < 0) {
-                    throw new IllegalAccessException();
+                    throw new IllegalAccessException("Неверные данные");
                 }
 
                 nameAndAge.add(allLine);
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("Файл не найден");
-        } catch (IllegalAccessException e) {
-            System.out.println("Некорректный входной файл");
+        } catch (FileNotFoundException | IllegalAccessException f) {
+            System.out.println(f.getMessage());
         }
         return nameAndAge;
     }

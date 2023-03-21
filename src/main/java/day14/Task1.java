@@ -2,7 +2,6 @@ package day14;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.List;
 import java.util.Scanner;
 
 public class Task1 {
@@ -12,13 +11,13 @@ public class Task1 {
             Scanner scanner = new Scanner(file);
             String[] numbers = scanner.nextLine().split(" ");
             if (numbers.length != 10)
-                System.out.println("Неккоректное количество значений");
+                throw new IllegalArgumentException("Неверные данные");
 
 
-        } catch (FileNotFoundException e) {
-            System.out.println("Ошибка, файл не найден");
+        } catch (FileNotFoundException | IllegalArgumentException e) {
+            System.out.println(e.getMessage());
         }
-         printSumDigits(file);
+        printSumDigits(file);
 
     }
 
