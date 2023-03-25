@@ -8,7 +8,7 @@ public class Task1 {
     File file = new File("C:\\Users\\Alik\\IdeaProjects\\secondTry\\src\\main\\java\\day16\\NUMBERS");
         System.out.println(printResult(file));
     }
-    public static double printResult(File file) throws FileNotFoundException {
+    public static double printResult(File file) {
         double sum = 0;
         double scale = Math.pow(10, 3);
 
